@@ -11,8 +11,7 @@ import Constants from "expo-constants";
 
 const wssUrl = Constants.expoConfig.extra.wssUrl;
 const rpcUrl = Constants.expoConfig.extra.rpcUrl;
-console.log(wssUrl);
-console.log(rpcUrl);
-const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
 
+//const provider = new ethers.providers.JsonRpcProvider(rpcUrl);
+const provider = new ethers.providers.WebSocketProvider(wssUrl);
 export default provider;
